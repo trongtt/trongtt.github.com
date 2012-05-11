@@ -2,7 +2,7 @@
 <html lang="en"><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <title>Personal Site</title>
+    <title>Components · Twitter Bootstrap</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -25,6 +25,48 @@
     <link rel="apple-touch-icon-precomposed" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
     
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="galleria/galleria-1.2.7.min.js"></script>
+    <script type="text/javascript" src="galleria/themes/classic/galleria.classic.min.js"></script>
+    
+    <style type="text/css">
+      .galleria {
+        height:467px;
+        margin-bottom: 50px;
+      }
+    </style>
+
+    <script type="text/javascript">
+
+      /* ========  For Galleria  =========== */
+      function buildGalleria(galleries)
+      {
+        $.each(galleries, function(gallery, photos) {
+          var items = [];
+          $.each(photos, function(a, b) {
+            items.push('<img src="' + b.source + '">');
+          })
+          
+          $('#galleria').append($('<div>', { 'id' : gallery, 'class' : 'galleria'}).append(items.join('')));
+          Galleria.run('#' + gallery);
+        });
+      }
+      /* ==================================== */
+
+      function callbackHandler(data) {
+        var galleries = jQuery.parseJSON(data);
+        
+        buildGalleria(galleries);
+      }
+
+      $(document).ready(function() {
+        $.ajax({
+          url : 'gallery/galleries.json',
+          dataType : 'text',
+          data : null,
+          success : callbackHandler
+        });
+      })
+    </script>
   </head>
 
   <body data-twttr-rendered="true" data-spy="scroll" data-target=".subnav" data-offset="50">
@@ -41,14 +83,14 @@
         <div class="nav-collapse">
           <ul class="nav">
             <li class="">
-              <a href="#">Home</a>
+              <a href="index.html">Home</a>
             </li>
             <li class="divider-vertical"></li>
             <li class="">
               <a href="contact.html">Contact</a>
             </li>
             <li class="">
-              <a href="gallery.html">Gallery</a>
+              <a href="#">Gallery</a>
             </li>
             <li class="">
               <a href="twitter.html">Twitter</a>
@@ -58,11 +100,15 @@
       </div>
     </div>
   </div>
-
-  <div class="container">
-    <header id="overview" class="jumbotron subhead">
-      <h1>Just for my kid</h1>
-      <p class="lead">One day you will see the most important thing in your life</p>
-    </header>
+  
+  <div class="container"> Switch views : 
+    <a href="#">Galleria</a>,
+    <a href="fancybox-gallery.html">FancyBox</a>
   </div>
-</body></html>
+
+  <h3>Galleria view</h3>
+  <div class="container">
+    <div id="galleria"></div>
+  </div>
+</body>
+</html>

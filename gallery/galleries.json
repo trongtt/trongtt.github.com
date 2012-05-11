@@ -1,0 +1,87 @@
+{
+	"local":
+		[
+			{
+				"source": "gallery/IMG_0001.JPG",
+				"description": "Image 1",
+				"target": "",
+				"link": ""
+			},
+			{
+				"source": "gallery/IMG_0002.JPG",
+				"description": "Image 2",
+				"target": "",
+				"link": ""
+			},
+			{
+				"source": "gallery/IMG_0003.JPG",
+				"description": "Image 3",
+				"target": "",
+				"link": ""
+			}
+		],
+
+	"gallery":
+		[
+			{
+				"source": "http://s1-05.twitpicproxy.com/photos/full/557937510.jpg?key=36482048",
+				"description": "Image 4",
+				"target": "",
+				"link": ""
+			},
+			{
+				"source": "http://d1-01.twitpicproxy.com/photos/full/556196512.jpg?key=16001200",
+				"description": "Image 2",
+				"target": "",
+				"link": ""
+			},
+			{
+				"source": "http://d3-05.twitpicproxy.com/photos/full/528425012.jpg?key=12001600",
+				"description": "Image 3",
+				"target": "",
+				"link": ""
+			},
+			{
+				"source": "http://d3-03.twitpicproxy.com/photos/full/458044881.jpg?key=16001200",
+				"description": "Image 2",
+				"target": "",
+				"link": ""
+			},
+			{
+				"source": "http://d3-01.twitpicproxy.com/photos/full/398253425.jpg?key=16001200",
+				"description": "Image 3",
+				"target": "",
+				"link": ""
+			},
+			{
+				"source": "http://d1-05.twitpicproxy.com/photos/full/353356773.jpg?key=360480",
+				"description": "Image 4",
+				"target": "",
+				"link": ""
+			},
+			{
+				"source": "http://d1-03.twitpicproxy.com/photos/full/338512651.jpg?key=12001600",
+				"description": "Image 2",
+				"target": "",
+				"link": ""
+			},
+			{
+				"source": "gallery/IMG_0003.JPG",
+				"description": "Image 3",
+				"target": "",
+				"link": ""
+			},
+			{
+				"source": "gallery/IMG_0002.JPG",
+				"description": "Image 2",
+				"target": "",
+				"link": ""
+			},
+			{
+				"source": "gallery/IMG_0003.JPG",
+				"description": "Image 3",
+				"target": "",
+				"link": ""
+			}
+		]
+} 

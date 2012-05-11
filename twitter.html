@@ -25,9 +25,17 @@
     <link rel="apple-touch-icon-precomposed" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
     
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $("#ifrm").height($(window).height());
+    }
+    )
+    </script>
   </head>
 
-  <body data-twttr-rendered="true" data-spy="scroll" data-target=".subnav" data-offset="50">
+  <body data-twttr-rendered="true" data-spy="scroll" data-target=".subnav" data-offset="50" style="padding: 0px; border: none; overflow: hidden;">
+  <iframe id="ifrm" src="http://twitpic.com/photos/khoitl#type=gallery" width="100%" style="border: none"></iframe>
   <!-- Navbar ================================================== -->
   <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
@@ -41,7 +49,7 @@
         <div class="nav-collapse">
           <ul class="nav">
             <li class="">
-              <a href="#">Home</a>
+              <a href="index.html">Home</a>
             </li>
             <li class="divider-vertical"></li>
             <li class="">
@@ -51,18 +59,11 @@
               <a href="gallery.html">Gallery</a>
             </li>
             <li class="">
-              <a href="twitter.html">Twitter</a>
+              <a href="#">Twitter</a>
             </li>
           </ul>
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="container">
-    <header id="overview" class="jumbotron subhead">
-      <h1>Just for my kid</h1>
-      <p class="lead">One day you will see the most important thing in your life</p>
-    </header>
   </div>
 </body></html>
