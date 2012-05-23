@@ -2,7 +2,7 @@
 <html lang="en"><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <title>Components · Twitter Bootstrap</title>
+    <title>Gallery</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -48,10 +48,8 @@
       .fancybox {
         margin-bottom: 50px;
       }
-      .smallImg {
+      .Thumb {
         margin: 10px;
-        width: 100px;
-        height: 100px;
       }
     </style>
     <script type="text/javascript">
@@ -62,12 +60,19 @@
         $.each(galleries, function(gallery, photos) {
           var items = [];
           $.each(photos, function(a, b) {
-            items.push('<a class="' + gallery + '" href="' + b.source + '" data-fancybox-group="gallery" title="' + b.title + '"><img class="smallImg" src="' + b.source + '" alt="" /></a>');
+            items.push('<a class="' + gallery + '" href="' + b.source + '" data-fancybox-group="gallery" title="' + b.title + '"><img class="Thumb" src="' + (b.thumb ? b.thumb : b.source) + '" alt="' + b.title + '" /></a>');
             
           })
           
           $('#fancybox').append($('<div>', { 'id' : gallery, 'class' : 'fancybox'}).append(items.join('')));
-          $('.' + gallery).fancybox();
+          
+          var opts = {
+            'openSpeed' : 'slow',
+            'closeSpeed' : 'slow',
+            'nextSpeed' : 'slow',
+            'prevSpeed' : 'slow'
+          };
+          $('.' + gallery).fancybox(opts);
         });
 			}
       /* ==================================== */
@@ -80,7 +85,7 @@
 
       $(document).ready(function() {
         $.ajax({
-          url : 'gallery/galleries.json',
+          url : 'gallery/data.json',
           dataType : 'text',
           data : null,
           success : callbackHandler
@@ -121,13 +126,14 @@
     </div>
   </div>
   
-  <div class="container"> Switch views : 
+  <div class="container"> Switch view : 
     <a href="gallery.html">Galleria</a>,
-    <a href="#">FancyBox</a>
+    <a href="#">FancyBox</a>,
+    <a href="highslide-gallery.html">HighSlide</a>
   </div>
 
-  <h3>FancyBox view</h3>
   <div class="container">
+    <h3>FancyBox view</h3>
     <div id="fancybox"></div>
   </div>
 
