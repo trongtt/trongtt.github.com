@@ -1,0 +1,4 @@
+name: Trong Tran's site
+markdown: redcarpet
+highlighter: pygments
+destination: target
