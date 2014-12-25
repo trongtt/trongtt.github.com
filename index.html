@@ -5,12 +5,8 @@ title: Just for my kids
 ---
 
 <div class="container">
-  {% include top_nav.html %}
-
-  <h1>{{ site.name }}</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>{{ post.categories }} <span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+  <header id="overview" class="jumbotron subhead">
+    <h1>Just for my kid</h1>
+    <p class="lead">One day you will see the most important thing in your life !!!</p>
+  </header>
 </div>
