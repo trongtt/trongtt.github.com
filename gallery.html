@@ -1,115 +1,59 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <title>Gallery</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+---
+layout: default
+navId: gallery
+title: My memories
+---
 
-    <!-- Le styles -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
-    <link href="css/docs.css" rel="stylesheet">
-    <link href="css/prettify.css" rel="stylesheet">
+<div class="container"> Switch view : 
+  <a href="#">Galleria</a>,
+  <a href="fancybox-gallery.html">FancyBox</a>
+  <a href="highslide-gallery.html">HighSlide</a>
+</div>
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+<div class="container">
+  <h3>Galleria view</h3>
+  <div id="galleria"></div>
+</div>
 
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="http://twitter.github.com/bootstrap/assets/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
-    
-    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="galleria/galleria-1.2.7.min.js"></script>
-    <script type="text/javascript" src="galleria/themes/classic/galleria.classic.min.js"></script>
-    
-    <style type="text/css">
-      .galleria {
-        height:467px;
-        margin-bottom: 50px;
-      }
-    </style>
+<script type="text/javascript" src="galleria/galleria-1.2.7.min.js"></script>
+<script type="text/javascript" src="galleria/themes/classic/galleria.classic.min.js"></script>
 
-    <script type="text/javascript">
+<style type="text/css">
+  .galleria {
+    height:467px;
+    margin-bottom: 50px;
+  }
+</style>
 
-      /* ========  For Galleria  =========== */
-      function buildGalleria(galleries)
-      {
-        $.each(galleries, function(gallery, photos) {
-          var items = [];
-          $.each(photos, function(a, b) {
-            items.push('<a href="' + b.source + '"><img src="' + (b.thumb ? b.thumb : b.source) + '"></a>');
-          })
-          
-          $('#galleria').append($('<div>', { 'id' : gallery, 'class' : 'galleria'}).append(items.join('')));
-          Galleria.run('#' + gallery);
-        });
-      }
-      /* ==================================== */
+<script type="text/javascript">
 
-      function callbackHandler(data) {
-        var galleries = jQuery.parseJSON(data);
-        
-        buildGalleria(galleries);
-      }
-
-      $(document).ready(function() {
-        $.ajax({
-          url : 'gallery/data.json',
-          dataType : 'text',
-          data : null,
-          success : callbackHandler
-        });
+  /* ========  For Galleria  =========== */
+  function buildGalleria(galleries)
+  {
+    $.each(galleries, function(gallery, photos) {
+      var items = [];
+      $.each(photos, function(a, b) {
+        items.push('<a href="' + b.source + '"><img src="' + (b.thumb ? b.thumb : b.source) + '"></a>');
       })
-    </script>
-  </head>
+      
+      $('#galleria').append($('<div>', { 'id' : gallery, 'class' : 'galleria'}).append(items.join('')));
+      Galleria.run('#' + gallery);
+    });
+  }
+  /* ==================================== */
 
-  <body data-twttr-rendered="true" data-spy="scroll" data-target=".subnav" data-offset="50">
-  <!-- Navbar ================================================== -->
-  <div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container">
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </a>
-        <a class="brand" href="">Bootstrap</a>
-        <div class="nav-collapse">
-          <ul class="nav">
-            <li class="">
-              <a href="index.html">Home</a>
-            </li>
-            <li class="divider-vertical"></li>
-            <li class="">
-              <a href="contact.html">Contact</a>
-            </li>
-            <li class="">
-              <a href="#">Gallery</a>
-            </li>
-            <li class="">
-              <a href="twitter.html">Twitter</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="container"> Switch view : 
-    <a href="#">Galleria</a>,
-    <a href="fancybox-gallery.html">FancyBox</a>
-    <a href="highslide-gallery.html">HighSlide</a>
-  </div>
+  function callbackHandler(data) {
+    var galleries = jQuery.parseJSON(data);
+    
+    buildGalleria(galleries);
+  }
 
-  <div class="container">
-    <h3>Galleria view</h3>
-    <div id="galleria"></div>
-  </div>
-</body>
-</html>
+  $(document).ready(function() {
+    $.ajax({
+      url : 'gallery/data.json',
+      dataType : 'text',
+      data : null,
+      success : callbackHandler
+    });
+  })
+</script>

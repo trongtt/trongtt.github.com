@@ -1,141 +1,83 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <title>Gallery</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+---
+layout: default
+navId: gallery
+title: My memories
+---
 
-    <!-- Le styles -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
-    <link href="css/docs.css" rel="stylesheet">
-    <link href="css/prettify.css" rel="stylesheet">
+<!-- Add mousewheel plugin (this is optional) -->
+<script type="text/javascript" src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+<!-- Add fancyBox main JS and CSS files -->
+<script type="text/javascript" src="fancybox/source/jquery.fancybox.js?v=2.0.6"></script>
+<link rel="stylesheet" type="text/css" href="fancybox/source/jquery.fancybox.css?v=2.0.6" media="screen" />
 
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="http://twitter.github.com/bootstrap/assets/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
-    
-    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<!-- Add Button helper (this is optional) -->
+<link rel="stylesheet" type="text/css" href="fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.2" />
+<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.2"></script>
 
-    <!-- Add mousewheel plugin (this is optional) -->
-    <script type="text/javascript" src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+<!-- Add Thumbnail helper (this is optional) -->
+<link rel="stylesheet" type="text/css" href="fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.2" />
+<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.2"></script>
 
-    <!-- Add fancyBox main JS and CSS files -->
-    <script type="text/javascript" src="fancybox/source/jquery.fancybox.js?v=2.0.6"></script>
-    <link rel="stylesheet" type="text/css" href="fancybox/source/jquery.fancybox.css?v=2.0.6" media="screen" />
+<!-- Add Media helper (this is optional) -->
+<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.0"></script>
 
-    <!-- Add Button helper (this is optional) -->
-    <link rel="stylesheet" type="text/css" href="fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.2" />
-    <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.2"></script>
-  
-    <!-- Add Thumbnail helper (this is optional) -->
-    <link rel="stylesheet" type="text/css" href="fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.2" />
-    <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.2"></script>
-  
-    <!-- Add Media helper (this is optional) -->
-    <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.0"></script>
-    
-    <style type="text/css">
-      .fancybox {
-        margin-bottom: 50px;
-      }
-      .Thumb {
-        margin: 10px;
-      }
-    </style>
-    <script type="text/javascript">
+<style type="text/css">
+  .fancybox {
+    margin-bottom: 50px;
+  }
+  .Thumb {
+    margin: 10px;
+  }
+</style>
+<script type="text/javascript">
 
-      /* ========  For FancyBox  =========== */
-			function buildFancyBox(galleries)
-			{
-        $.each(galleries, function(gallery, photos) {
-          var items = [];
-          $.each(photos, function(a, b) {
-            items.push('<a class="' + gallery + '" href="' + b.source + '" data-fancybox-group="gallery" title="' + b.title + '"><img class="Thumb" src="' + (b.thumb ? b.thumb : b.source) + '" alt="' + b.title + '" /></a>');
-            
-          })
-          
-          $('#fancybox').append($('<div>', { 'id' : gallery, 'class' : 'fancybox'}).append(items.join('')));
-          
-          var opts = {
-            'openSpeed' : 'slow',
-            'closeSpeed' : 'slow',
-            'nextSpeed' : 'slow',
-            'prevSpeed' : 'slow'
-          };
-          $('.' + gallery).fancybox(opts);
-        });
-			}
-      /* ==================================== */
-
-      function callbackHandler(data) {
-        var galleries = jQuery.parseJSON(data);
+  /* ========  For FancyBox  =========== */
+	function buildFancyBox(galleries)
+	{
+    $.each(galleries, function(gallery, photos) {
+      var items = [];
+      $.each(photos, function(a, b) {
+        items.push('<a class="' + gallery + '" href="' + b.source + '" data-fancybox-group="gallery" title="' + b.title + '"><img class="Thumb" src="' + (b.thumb ? b.thumb : b.source) + '" alt="' + b.title + '" /></a>');
         
-        buildFancyBox(galleries);
-      }
-
-      $(document).ready(function() {
-        $.ajax({
-          url : 'gallery/data.json',
-          dataType : 'text',
-          data : null,
-          success : callbackHandler
-        });
       })
-		</script>
-  </head>
+      
+      $('#fancybox').append($('<div>', { 'id' : gallery, 'class' : 'fancybox'}).append(items.join('')));
+      
+      var opts = {
+        'openSpeed' : 'slow',
+        'closeSpeed' : 'slow',
+        'nextSpeed' : 'slow',
+        'prevSpeed' : 'slow'
+      };
+      $('.' + gallery).fancybox(opts);
+    });
+	}
+  /* ==================================== */
 
-  <body data-twttr-rendered="true" data-spy="scroll" data-target=".subnav" data-offset="50">
-  <!-- Navbar ================================================== -->
-  <div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container">
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </a>
-        <a class="brand" href="">Bootstrap</a>
-        <div class="nav-collapse">
-          <ul class="nav">
-            <li class="">
-              <a href="index.html">Home</a>
-            </li>
-            <li class="divider-vertical"></li>
-            <li class="">
-              <a href="contact.html">Contact</a>
-            </li>
-            <li class="">
-              <a href="#">Gallery</a>
-            </li>
-            <li class="">
-              <a href="twitter.html">Twitter</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="container"> Switch view : 
-    <a href="gallery.html">Galleria</a>,
-    <a href="#">FancyBox</a>,
-    <a href="highslide-gallery.html">HighSlide</a>
-  </div>
+  function callbackHandler(data) {
+    var galleries = jQuery.parseJSON(data);
+    
+    buildFancyBox(galleries);
+  }
 
-  <div class="container">
-    <h3>FancyBox view</h3>
-    <div id="fancybox"></div>
-  </div>
+  $(document).ready(function() {
+    $.ajax({
+      url : 'gallery/data.json',
+      dataType : 'text',
+      data : null,
+      success : callbackHandler
+    });
+  })
+</script>
 
-</body>
-</html>
+<div class="container"> Switch view : 
+  <a href="gallery.html">Galleria</a>,
+  <a href="#">FancyBox</a>,
+  <a href="highslide-gallery.html">HighSlide</a>
+</div>
+
+<div class="container">
+  <h3>FancyBox view</h3>
+  <div id="fancybox"></div>
+</div>
