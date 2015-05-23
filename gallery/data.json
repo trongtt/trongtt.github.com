@@ -2,228 +2,46 @@
 	"gallery":
 		[
 			{
-				"thumb": "http://d1-04.twitpicproxy.com/photos/thumb/327528225.jpg?key=12001600",
-				"source": "http://d1-04.twitpicproxy.com/photos/full/327528225.jpg?key=12001600",
-				"description": "Image 4",
+				"thumb" : "gallery/1_s.JPG",
+				"source": "gallery/1.JPG",
+				"description": "Image 1",
 				"target": "",
 				"link": ""
 			},
 			{
-				"thumb": "http://d2-01.twitpicproxy.com/photos/thumb/338508838.jpg?key=12001600",
-				"source": "http://d2-01.twitpicproxy.com/photos/full/338508838.jpg?key=12001600",
-				"description": "Image 4",
-				"target": "",
-				"link": ""
-			},
-			{
-				"thumb": "http://d1-03.twitpicproxy.com/photos/thumb/338512651.jpg?key=12001600",
-				"source": "http://d1-03.twitpicproxy.com/photos/full/338512651.jpg?key=12001600",
-				"description": "Image 4",
-				"target": "",
-				"link": ""
-			},
-			{
-				"thumb": "http://d2-02.twitpicproxy.com/photos/thumb/338514442.jpg?key=12001600",
-				"source": "http://d2-02.twitpicproxy.com/photos/full/338514442.jpg?key=12001600",
-				"description": "Image 4",
-				"target": "",
-				"link": ""
-			},
-			{
-				"thumb": "http://d1-05.twitpicproxy.com/photos/thumb/353356773.jpg?key=360480",
-				"source": "http://d1-05.twitpicproxy.com/photos/full/353356773.jpg?key=360480",
-				"description": "Image 4",
-				"target": "",
-				"link": ""
-			},
-			{
-				"thumb": "http://d3-01.twitpicproxy.com/photos/thumb/398253425.jpg?key=16001200",
-				"source": "http://d3-01.twitpicproxy.com/photos/full/398253425.jpg?key=16001200",
-				"description": "Image 4",
-				"target": "",
-				"link": ""
-			},
-			{
-				"thumb": "http://d3-02.twitpicproxy.com/photos/thumb/430922537.jpg?key=16001200",
-				"source": "http://d3-02.twitpicproxy.com/photos/full/430922537.jpg?key=16001200",
-				"description": "Image 4",
-				"target": "",
-				"link": ""
-			},
-			{
-				"thumb": "http://d2-03.twitpicproxy.com/photos/thumb/437810939.jpg?key=36482048",
-				"source": "http://d2-03.twitpicproxy.com/photos/full/437810939.jpg?key=36482048",
-				"description": "Image 4",
-				"target": "",
-				"link": ""
-			},
-			{
-				"thumb": "http://d2-03.twitpicproxy.com/photos/thumb/437811647.jpg?key=36482048",
-				"source": "http://d2-03.twitpicproxy.com/photos/full/437811647.jpg?key=36482048",
-				"description": "Image 4",
-				"target": "",
-				"link": ""
-			},
-			{
-				"thumb": "http://d1-04.twitpicproxy.com/photos/thumb/437812613.jpg?key=36482048",
-				"source": "http://d1-04.twitpicproxy.com/photos/full/437812613.jpg?key=36482048",
-				"description": "Image 4",
-				"target": "",
-				"link": ""
-			},
-			{
-				"thumb": "http://d2-05.twitpicproxy.com/photos/thumb/437813265.jpg?key=36482048",
-				"source": "http://d2-05.twitpicproxy.com/photos/full/437813265.jpg?key=36482048",
-				"description": "Image 4",
-				"target": "",
-				"link": ""
-			},
-			{
-				"thumb": "http://d3-03.twitpicproxy.com/photos/thumb/458044881.jpg?key=16001200",
-				"source": "http://d3-03.twitpicproxy.com/photos/full/458044881.jpg?key=16001200",
-				"description": "Image 4",
-				"target": "",
-				"link": ""
-			},
-			{
-				"thumb": "http://d1-04.twitpicproxy.com/photos/thumb/458047981.jpg?key=16001200",
-				"source": "http://d1-04.twitpicproxy.com/photos/full/458047981.jpg?key=16001200",
-				"description": "Image 2",
-				"target": "",
-				"link": ""
-			},
-			{
-				"thumb": "http://d2-01.twitpicproxy.com/photos/thumb/477213786.jpg?key=640480",
-				"source": "http://d2-01.twitpicproxy.com/photos/full/477213786.jpg?key=640480",
-				"description": "Image 3",
-				"target": "",
-				"link": ""
-			},
-			{
-				"thumb": "http://d3-05.twitpicproxy.com/photos/thumb/528425012.jpg?key=12001600",
-				"source": "http://d3-05.twitpicproxy.com/photos/full/528425012.jpg?key=12001600",
-				"description": "Image 2",
-				"target": "",
-				"link": ""
-			},
-			{
-				"thumb": "http://d3-05.twitpicproxy.com/photos/thumb/554161560.jpg?key=16001200",
-				"source": "http://d3-05.twitpicproxy.com/photos/full/554161560.jpg?key=16001200",
-				"description": "Image 3",
-				"target": "",
-				"link": ""
-			},
-			{
-				"thumb": "http://d1-01.twitpicproxy.com/photos/thumb/556196512.jpg?key=16001200",
-				"source": "http://d1-01.twitpicproxy.com/photos/full/556196512.jpg?key=16001200",
-				"description": "Image 4",
-				"target": "",
-				"link": ""
-			},
-			{
-				"thumb": "http://d3-03.twitpicproxy.com/photos/thumb/557937510.jpg?key=36482048",
-				"source": "http://d3-03.twitpicproxy.com/photos/full/557937510.jpg?key=36482048",
-				"description": "Image 2",
-				"target": "",
-				"link": ""
-			},
-			{
-				"thumb": "http://d3-04.twitpicproxy.com/photos/thumb/559137525.jpg?key=12001600",
-				"source": "http://d3-04.twitpicproxy.com/photos/full/559137525.jpg?key=12001600",
-				"description": "Image 3",
-				"target": "",
-				"link": ""
-			},
-			{
-				"thumb" : "http://s1-04.twitpicproxy.com/photos/thumb/576033500.jpg?key=16001200",
-				"source": "http://s1-04.twitpicproxy.com/photos/full/576033500.jpg?key=16001200",
+				"thumb" : "gallery/2_s.JPG",
+				"source": "gallery/2.JPG",
 				"description": "Image 2",
 				"target": "",
 				"link": "",
-				"title" : "My grandfather"
-			},
-			{
-				"thumb": "http://s1-02.twitpicproxy.com/photos/thumb/576047842.jpg?key=16001200",
-				"source": "http://s1-02.twitpicproxy.com/photos/full/576047842.jpg?key=16001200",
-				"description": "Image 3",
-				"target": "",
-				"link": "",
-				"title" : "My first birthday"
-			},
-			{
-				"thumb" : "http://s1-03.twitpicproxy.com/photos/thumb/576080027.jpg?key=12001600",
-				"source": "http://s1-03.twitpicproxy.com/photos/full/576080027.jpg?key=12001600",
-				"description": "Image 3",
-				"target": "",
-				"link": "",
-				"title" : "My grandmother"
-			},
-			{
-				"thumb" : "http://s1-05.twitpicproxy.com/photos/thumb/579258945.jpg?key=12001600",
-				"source": "http://s1-05.twitpicproxy.com/photos/full/579258945.jpg?key=12001600",
-				"description": "Image 3",
-				"target": "",
-				"link": "",
-				"title" : "My grandmother"
-			},
-			{
-				"thumb" : "http://s1-02.twitpicproxy.com/photos/thumb/584825930.jpg?key=20483648",
-				"source": "http://s1-02.twitpicproxy.com/photos/full/584825930.jpg?key=20483648",
-				"description": "Image 3",
-				"target": "",
-				"link": "",
-				"title" : "My grandmother"
-			},
-			{
-				"thumb" : "http://s1-04.twitpicproxy.com/photos/thumb/584825934.jpg?key=36482048",
-				"source": "http://s1-04.twitpicproxy.com/photos/full/584825934.jpg?key=36482048",
-				"description": "Image 3",
-				"target": "",
-				"link": "",
-				"title" : "My grandmother"
-			},
-			{
-				"thumb" : "http://s1-04.twitpicproxy.com/photos/thumb/584825938.jpg?key=20483648",
-				"source": "http://s1-04.twitpicproxy.com/photos/full/584825938.jpg?key=20483648",
-				"description": "Image 3",
-				"target": "",
-				"link": "",
-				"title" : "My grandmother"
+				"title" : "My son"
 			}
 		],
 
 	"local":
 		[
 			{
-				"thumb" : "gallery/s_img_0001.JPG",
-				"source": "gallery/IMG_0001.JPG",
+				"thumb" : "gallery/1_s.JPG",
+				"source": "gallery/1.JPG",
 				"description": "Image 1",
 				"target": "",
 				"link": ""
 			},
 			{
-				"thumb" : "http://s1-02.twitpicproxy.com/photos/thumb/576047842.jpg?key=16001200",
-				"source": "http://s1-02.twitpicproxy.com/photos/full/576047842.jpg?key=16001200",
+				"thumb" : "gallery/2_s.JPG",
+				"source": "gallery/2.JPG",
 				"description": "Image 2",
 				"target": "",
 				"link": "",
-				"title" : "My grandfather"
+				"title" : "My son"
 			},
 			{
-				"thumb": "http://d1-04.twitpicproxy.com/photos/thumb/437812613.jpg?key=36482048",
-				"source": "http://d1-04.twitpicproxy.com/photos/full/437812613.jpg?key=36482048",
+				"thumb" : "gallery/3_s.JPG",
+				"source": "gallery/3.JPG",
 				"description": "Image 3",
 				"target": "",
 				"link": "",
-				"title" : "My first birthday"
-			},
-			{
-				"thumb" : "http://d3-04.twitpicproxy.com/photos/thumb/559137525.jpg?key=12001600",
-				"source": "http://s1-02.twitpicproxy.com/photos/full/559137525.jpg?key=12001600",
-				"description": "Image 3",
-				"target": "",
-				"link": "",
-				"title" : "My grandmother"
+				"title" : "Wonderful land"
 			}
 		]
 }
