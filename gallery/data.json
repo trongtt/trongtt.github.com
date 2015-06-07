@@ -15,6 +15,22 @@
 				"target": "",
 				"link": "",
 				"title" : "My son"
+			},
+			{
+				"thumb" : "gallery/4_s.JPG",
+				"source": "gallery/4.JPG",
+				"description": "Image 2",
+				"target": "",
+				"link": "",
+				"title" : "My son"
+			},
+			{
+				"thumb" : "gallery/5_s.JPG",
+				"source": "gallery/5.JPG",
+				"description": "Image 2",
+				"target": "",
+				"link": "",
+				"title" : "My son"
 			}
 		],
 
@@ -38,6 +54,22 @@
 			{
 				"thumb" : "gallery/3_s.JPG",
 				"source": "gallery/3.JPG",
+				"description": "Image 3",
+				"target": "",
+				"link": "",
+				"title" : "Wonderful land"
+			},
+			{
+				"thumb" : "gallery/4_s.JPG",
+				"source": "gallery/4.JPG",
+				"description": "Image 3",
+				"target": "",
+				"link": "",
+				"title" : "Wonderful land"
+			},
+			{
+				"thumb" : "gallery/5_s.JPG",
+				"source": "gallery/5.JPG",
 				"description": "Image 3",
 				"target": "",
 				"link": "",
